@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Cita | Ladran Service</title>
+    <link rel="stylesheet" href="sryle.css">
+</head>
+<body class="reserve-page">
+
+    <div class="form-container">
+        <h2>Agendar Cita 🐾</h2>
+        <form id="reservaForm">
+            <label>Nombre del Dueño</label>
+            <input type="text" id="cliente" placeholder="Tu nombre" required>
+
+            <label>Nombre de la Mascota</label>
+            <input type="text" id="perrito" placeholder="Nombre de tu mascota" required>
+
+            <label>Teléfono de Contacto</label>
+            <input type="tel" id="telefono" placeholder="849-000-0000" required>
+
+            <label>Servicio</label>
+            <select id="servicio">
+                <option value="Baño">Baño</option>
+                <option value="Estética">Estética</option>
+                <option value="Hotel">Hotel</option>
+            </select>
+
+            <div class="btns-row">
+                <a href="index.html" class="btn-outline">Volver</a>
+                <button type="submit" class="btn-primary">Confirmar Cita</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

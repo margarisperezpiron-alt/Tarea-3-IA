@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladran Admin | Gestión</title>
+    <link rel="stylesheet" href="sryle.css">
+</head>
+<body class="admin-body">
+
+    <div class="sidebar">
+        <h2>LADRAN ADMIN</h2>
+        <nav>
+            <a href="admin.html" class="active">📍 Todas las Citas</a>
+            <a href="index.html">🌐 Ver Web</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="admin-header">
+            <h1>Gestión de Clientes</h1>
+            <button class="btn-danger">Limpiar Historial</button>
+        </header>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dueño</th>
+                        <th>Mascota</th>
+                        <th>Tamaño</th>
+                        <th>Servicio</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Control</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-citas">
+                    <tr>
+                        <td>Maryarys Perez</td>
+                        <td>Zeus</td>
+                        <td><span class="badge">Grande</span></td>
+                        <td><span class="service-tag">Baño</span></td>
+                        <td>2026-02-15</td>
+                        <td>08:00 AM</td>
+                        <td><button class="delete-btn">🗑️</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

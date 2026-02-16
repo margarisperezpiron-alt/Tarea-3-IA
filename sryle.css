@@ -1,0 +1,226 @@
+/* Variables de color (asegúrate de que estas estén al principio de tu CSS) */
+:root {
+    --blue-main: #4a90e2;
+    --blue-soft: #eef2f7; /* Un azul muy claro, casi blanco */
+    --bg-light: #f8fbff;
+    --white: #ffffff;
+    --text-dark: #333;
+    --shadow: 0 10px 30px rgba(0,0,0,0.05);
+    --green-card: #e6ffe6; /* Para el botón de contacto */
+    --orange-card: #fff9e6; /* Para el botón de agenda */
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: var(--bg-light); /* Fondo general de la página */
+    color: var(--text-dark);
+}
+
+/* Navbar (Se mantiene igual, solo un pequeño ajuste en el logo si quieres) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    background: var(--white);
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03); /* Sombra ligera para el navbar */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #3cb371; /* Un verde amigable para el logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: var(--blue-main);
+}
+.nav-links a.active::after, .nav-links a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--blue-main);
+    transform: scaleX(0.7);
+    transition: transform 0.3s ease;
+}
+
+.btn-cita {
+    background: var(--blue-main);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+    transition: all 0.3s ease;
+}
+.btn-cita:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.5);
+}
+
+/* NUEVA SECCIÓN HERO DE LA PÁGINA DE INICIO */
+.hero-new {
+    text-align: center;
+    padding: 80px 8%;
+    background: var(--blue-soft); /* Fondo azul claro para esta sección */
+    border-radius: 0 0 50px 50px; /* Bordes redondeados abajo */
+}
+
+.hero-new h1 {
+    font-size: 2.8em;
+    color: var(--text-dark);
+    margin-bottom: 50px;
+}
+
+.hero-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.hero-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    width: 250px;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.hero-card img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+.hero-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.hero-card p {
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Colores específicos para las tarjetas del hero */
+.service-card { background-color: var(--white); }
+.contact-card { background-color: var(--green-card); }
+.agenda-card { background-color: var(--orange-card); }
+
+
+/* Sección de Servicios (se mantiene similar, solo la ID ha cambiado) */
+.services-section {
+    text-align: center;
+    padding: 80px 8%; /* Más espacio vertical */
+    background: var(--bg-light);
+}
+.services-section h2 { margin-bottom: 20px; }
+.services-section .subtitle { margin-bottom: 50px; color: #666; }
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que las tarjetas se ajusten en pantallas pequeñas */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 25px;
+    flex: 1;
+    min-width: 280px; /* Ancho mínimo para que no se hagan muy pequeñas */
+    max-width: 320px; /* Ancho máximo */
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.card img { margin-bottom: 15px; }
+.card h3 { color: #333; margin-bottom: 10px; }
+.card p { color: #777; font-size: 0.9em; }
+
+/* Sección de Contacto (ID cambiada y ajustes menores de estilo) */
+.contact-section {
+    padding: 80px 8%;
+    background: var(--blue-soft); /* Fondo para la sección de contacto */
+    text-align: center;
+    border-radius: 50px 50px 0 0; /* Bordes redondeados arriba */
+}
+
+.contact-section h2 { margin-bottom: 30px; }
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: var(--blue-main);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.contact-info a:hover {
+    color: #333;
+}
+
+.btn-primary {
+    background: var(--blue-main);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+    transition: all 0.3s ease;
+    display: inline-block; /* Para que el botón de WhatsApp se centre bien */
+    margin-top: 20px;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.5);
+}
+
+/* Estilos de admin.html y Reservar.html deben estar en el mismo sryle.css */
+/* ... Mantén los estilos para .admin-body, .form-container, etc., que te di antes ... */
