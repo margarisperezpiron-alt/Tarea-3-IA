@@ -1,2 +1,1 @@
-# Tarea-3-IA
-Margarys Perez Piron 24-EISN-8-058
+https://github.com/margarisperezpiron-alt/Tarea-3-IA
